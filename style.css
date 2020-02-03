@@ -1,0 +1,17 @@
+.jumbotron-fluid {
+    background-color: #00BFFF;
+}
+
+.container {
+    max-width: 95%;
+}
+
+.col-lg-4 {
+    background-color: 
+    blueviolet;
+}
+
+.col-md-2.col-sm-6.mt-5.mr-3, .col-lg-12.col-sm-6.mb-4 {
+    background-color: 
+    beige;
+}
