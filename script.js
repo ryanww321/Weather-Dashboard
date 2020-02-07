@@ -1,4 +1,4 @@
-//Array for the recent searches
+//Array for the search results
 var searchResultsArray = [];
 
 $(document).ready(function () {
@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if (searchResultsArray.length > 0) {
             for (var i = 0; i < searchResultsArray.length; i++) {
-                var $pastSearchResult = $(`<li><button class="priorResultButton">${searchResultsArray[i]}</button></li>`);
+                var $pastSearchResult = $(`<li class="priorResultButton">${searchResultsArray[i]}</li>`);
                 $("#previous-searches").append($pastSearchResult);
             }
         }
@@ -28,8 +28,9 @@ $(document).ready(function () {
         while (priorUL.firstChild) priorUL.removeChild(priorUL.firstChild);
     }
 
-    //Click event for the search button
+    //on click event for the search button
     $("#search-button").on("click", function () {
+        event.preventDefault();
         var cityName = $("#search-request").val();
 
         var APIKey = "ccc2656c477fe39eb770c7555e7b98eb";
@@ -56,7 +57,7 @@ $(document).ready(function () {
 
             var uvUrl = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + citylat + "&lon=" + citylong + "&appid=" + APIKey;
 
-            //a separate call for the UV Index
+            //needed a separate call for the UV index
             $.ajax({
                 url: uvUrl,
                 method: "GET"
@@ -146,11 +147,11 @@ $(document).ready(function () {
 
     });
 
-    //This on click event listner uses the exact same funtions as the Search Bar
+    //This on click event listener uses the exact same funtions as the Search Bar
     $(".priorResultButton").on("click", function () {
+        event.preventDefault();
         var cityName = $(this).text();
 
-        //I thought you guys were supposed to show us a way to hide our key
         var APIKey = "ccc2656c477fe39eb770c7555e7b98eb";
 
         var searchURL =
