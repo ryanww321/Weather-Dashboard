@@ -5,3 +5,7 @@
 .container {
     max-width: 95%;
 }
+
+::marker {
+    color: transparent;
+}

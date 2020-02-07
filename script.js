@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if (searchResultsArray.length > 0) {
             for (var i = 0; i < searchResultsArray.length; i++) {
-                var $pastSearchResult = $(`<li class="priorResultButton">${searchResultsArray[i]}</li>`);
+                var $pastSearchResult = $(`<li class="priorResultButton mx-2">${searchResultsArray[i]}</li>`);
                 $("#previous-searches").append($pastSearchResult);
             }
         }
@@ -50,7 +50,7 @@ $(document).ready(function () {
             $("#searched-city").text(response.city.name);
             $("#main-temp").text("Temp: " + response.list[0].main.temp);
             $("#main-humidity").text("Humidty: " + response.list[0].main.humidity);
-            $("#main-windspeed").text("Wind Speed" + response.list[0].wind.speed);
+            $("#main-windspeed").text("Wind: " + response.list[0].wind.speed);
 
             var citylat = response.city.coord.lat;
             var citylong = response.city.coord.lon;
@@ -63,7 +63,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
 
-                $("#main-UV").text("UV level: " + response.value);
+                $("#main-UV").text("UV Level: " + response.value);
 
             });
 
@@ -98,33 +98,33 @@ $(document).ready(function () {
 
 
             //5 day forecast starts here
-            var $day1Forcast = $(`<li>${response.list[7].main.temp}</li>
-            <li>${response.list[7].main.humidity}</li>
-            <li>${response.list[7].wind.speed}</li>`);
+            var $day1Forcast = $(`<li>Temp: ${response.list[7].main.temp}</li>
+            <li>Humidity: ${response.list[7].main.humidity}</li>
+            <li>Wind Speed: ${response.list[7].wind.speed}</li>`);
 
             $("#day1").append($day1Forcast);
 
-            var $day2Forcast = $(`<li>${response.list[15].main.temp}</li>
-            <li>${response.list[15].main.humidity}</li>
-            <li>${response.list[15].wind.speed}</li>`);
+            var $day2Forcast = $(`<li>Temp: ${response.list[15].main.temp}</li>
+            <li>Humidity: ${response.list[15].main.humidity}</li>
+            <li>Wind: ${response.list[15].wind.speed}</li>`);
 
             $("#day2").append($day2Forcast);
 
-            var $day3Forcast = $(`<li>${response.list[23].main.temp}</li>
-            <li>${response.list[23].main.humidity}</li>
-            <li>${response.list[23].wind.speed}</li>`);
+            var $day3Forcast = $(`<li>Temp: ${response.list[23].main.temp}</li>
+            <li>Humidity: ${response.list[23].main.humidity}</li>
+            <li>Wind: ${response.list[23].wind.speed}</li>`);
 
             $("#day3").append($day3Forcast);
 
-            var $day4Forcast = $(`<li>${response.list[31].main.temp}</li>
-            <li>${response.list[31].main.humidity}</li>
-            <li>${response.list[31].wind.speed}</li>`);
+            var $day4Forcast = $(`<li>Temp: ${response.list[31].main.temp}</li>
+            <li>Humidity: ${response.list[31].main.humidity}</li>
+            <li>Wind: ${response.list[31].wind.speed}</li>`);
 
             $("#day4").append($day4Forcast);
 
-            var $day5Forcast = $(`<li>${response.list[39].main.temp}</li>
-            <li>${response.list[39].main.humidity}</li>
-            <li>${response.list[39].wind.speed}</li>`);
+            var $day5Forcast = $(`<li>Temp: ${response.list[39].main.temp}</li>
+            <li>Humidity: ${response.list[39].main.humidity}</li>
+            <li>Wind: ${response.list[39].wind.speed}</li>`);
 
             $("#day5").append($day5Forcast);
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
             $("#searched-city").text(response.city.name);
             $("#main-temp").text("Temp: " + response.list[0].main.temp);
             $("#main-humidity").text("Humidty: " + response.list[0].main.humidity);
-            $("#main-windspeed").text("Wind Speed" + response.list[0].wind.speed);
+            $("#main-windspeed").text("Wind: " + response.list[0].wind.speed);
 
             var citylat = response.city.coord.lat;
             var citylong = response.city.coord.lon;
@@ -218,33 +218,33 @@ $(document).ready(function () {
 
 
             //Start of 5 day forcast
-            var $day1Forcast = $(`<li>${response.list[7].main.temp}</li>
-            <li>${response.list[7].main.humidity}</li>
-            <li>${response.list[7].wind.speed}</li>`);
+            var $day1Forcast = $(`<li>Temp: ${response.list[7].main.temp}</li>
+            <li>Humidity: ${response.list[7].main.humidity}</li>
+            <li>Wind: ${response.list[7].wind.speed}</li>`);
 
             $("#day1").append($day1Forcast);
 
-            var $day2Forcast = $(`<li>${response.list[15].main.temp}</li>
-            <li>${response.list[15].main.humidity}</li>
-            <li>${response.list[15].wind.speed}</li>`);
+            var $day2Forcast = $(`<li>Temp: ${response.list[15].main.temp}</li>
+            <li>Humidity: ${response.list[15].main.humidity}</li>
+            <li>Wind: ${response.list[15].wind.speed}</li>`);
 
             $("#day2").append($day2Forcast);
 
-            var $day3Forcast = $(`<li>${response.list[23].main.temp}</li>
-            <li>${response.list[23].main.humidity}</li>
-            <li>${response.list[23].wind.speed}</li>`);
+            var $day3Forcast = $(`<li>Temp: ${response.list[23].main.temp}</li>
+            <li>Humidity: ${response.list[23].main.humidity}</li>
+            <li>Wind: ${response.list[23].wind.speed}</li>`);
 
             $("#day3").append($day3Forcast);
 
-            var $day4Forcast = $(`<li>${response.list[31].main.temp}</li>
-            <li>${response.list[31].main.humidity}</li>
-            <li>${response.list[31].wind.speed}</li>`);
+            var $day4Forcast = $(`<li>Temp: ${response.list[31].main.temp}</li>
+            <li>Humidity: ${response.list[31].main.humidity}</li>
+            <li>Wind: ${response.list[31].wind.speed}</li>`);
 
             $("#day4").append($day4Forcast);
 
-            var $day5Forcast = $(`<li>${response.list[39].main.temp}</li>
-            <li>${response.list[39].main.humidity}</li>
-            <li>${response.list[39].wind.speed}</li>`);
+            var $day5Forcast = $(`<li>Temp: ${response.list[39].main.temp}</li>
+            <li>Humidity: ${response.list[39].main.humidity}</li>
+            <li>Wind: ${response.list[39].wind.speed}</li>`);
 
             $("#day5").append($day5Forcast);
 
